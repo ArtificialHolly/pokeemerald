@@ -1014,3 +1014,54 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+LittlerootTown_EventScript_FroakieGiver::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_FROAKIE, LittlerootTown_EventScript_ReceivedFroakie
+	msgbox LittlerootTown_Text_TakeThisFroakie, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_EventScript_DeclineFroakie
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, LittlerootTown_EventScript_NoRoomForFroakie
+	setflag FLAG_RECEIVED_FROAKIE
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_Text_ReceivedFroakie, MSGBOX_DEFAULT
+	waitmessage
+	waitfanfare
+	givemon SPECIES_FROAKIE, 5, ITEM_NONE
+	msgbox LittlerootTown_Text_FroakieIsCool, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_EventScript_DeclineFroakie::
+	msgbox LittlerootTown_Text_DeclineFroakie, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_EventScript_NoRoomForFroakie::
+	msgbox LittlerootTown_Text_NoRoomForFroakie, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_EventScript_ReceivedFroakie::
+	msgbox LittlerootTown_Text_FroakieIsCool, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_Text_TakeThisFroakie:
+	.string "I found this POKéMON near a pond,\n"
+	.string "but I'm not a TRAINER.\p"
+	.string "Would you like to take this FROAKIE?$"
+
+LittlerootTown_Text_ReceivedFroakie:
+	.string "{PLAYER} received a FROAKIE!$"
+
+LittlerootTown_Text_DeclineFroakie:
+	.string "Oh, I see. It is a bit of a\n"
+	.string "responsibility.$"
+
+LittlerootTown_Text_FroakieIsCool:
+	.string "FROAKIE is a very cool POKéMON.\n"
+	.string "I'm sure you'll be great friends!$"
+
+LittlerootTown_Text_NoRoomForFroakie:
+	.string "NO ROOM!$"

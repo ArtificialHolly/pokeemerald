@@ -1163,3 +1163,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+
+	.include "data/maps/StarzoneGateway/scripts.inc"
+
+	.include "data/maps/StarzoneSafariEntrance/scripts.inc"
+
+	.include "data/maps/StarzoneSafariDesert/scripts.inc"
+
+	.include "data/maps/StarzoneSafariBeach/scripts.inc"
+
+	.include "data/maps/StarzoneSafariSpooky/scripts.inc"
+
+	.include "data/maps/StarzoneSafariForest/scripts.inc"

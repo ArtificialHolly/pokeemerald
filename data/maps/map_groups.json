@@ -92,7 +92,12 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "StarzoneGateway",
+    "StarzoneSafariDesert",
+    "StarzoneSafariBeach",
+    "StarzoneSafariSpooky",
+    "StarzoneSafariForest"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -492,7 +497,8 @@
     "BattlePyramidSquare14",
     "BattlePyramidSquare15",
     "BattlePyramidSquare16",
-    "UnionRoom"
+    "UnionRoom",
+    "StarzoneSafariEntrance"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Northwest",
